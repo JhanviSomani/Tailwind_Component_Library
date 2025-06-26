@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables_page</title>
+    <!-- css-file -->
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="flex items-center justify-between px-12 h-16 lg:gap-8">
+        <a
+          class="flex items-center gap-4 text-[#111418] whitespace-nowrap"
+          href="/index.html"
+        >
+          <div class="size-4">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+          >
+            Component Library
+          </h2>
+        </a>
+        <div
+          class="dropdown-menu absolute -top-full left-0 w-full flex flex-col gap-6 items-center py-2 text-lg max-lg:bg-white lg:static lg:flex-row lg:justify-between"
+        >
+          <ul class="flex flex-col items-center gap-4 lg:flex-row lg:gap-8">
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/cards.html"
+                >Cards</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Buttons.html"
+                >Buttons</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Breadcrumb.html"
+                >Breadcrumbs</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/forms.html"
+                >Forms</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Tables.html"
+                >Tables</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex flex-col items-center gap-4 lg:flex-row lg:gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#60758a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60758a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Sign In</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="menu-toggle" class="text-[#111418] toggle-button lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            class="w-6 h-6"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main overflow-x-hidden mb-10">
+      <section class="heading px-36 py-8">
+        <h1 class="text-4xl font-bold">Tables Components</h1>
+        <p class="text-lg max-w-[500px] mt-4">
+          Explore a variety of Tables components designed with Tailwind CSS and
+          start using it for your web design.
+        </p>
+      </section>
+      <hr />
+      <section class="cards-variety-section mt-12 px-36 flex flex-col gap-8">
+        <div class="preview-1 relative">
+          <h1 class="text-2xl font-bold">Default Table</h1>
+          <div class="card-1 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <div class="flex flex-col items-center px-5">
+              <div
+                class="w-full overflow-hidden rounded-lg border border-stone-200"
+              >
+                <table class="w-full">
+                  <thead
+                    class="border-b border-stone-200 bg-stone-100 text-sm font-medium text-stone-600"
+                  >
+                    <tr>
+                      <th class="px-2.5 py-2 text-start font-medium">Name</th>
+                      <th class="px-2.5 py-2 text-start font-medium">Job</th>
+                      <th class="px-2.5 py-2 text-start font-medium">
+                        Employed
+                      </th>
+                      <th class="px-2.5 py-2 text-start font-medium"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="group text-sm text-stone-800">
+                    <tr class="border-b border-stone-200 last:border-0">
+                      <td class="p-3">John Michael</td>
+                      <td class="p-3">Manager</td>
+                      <td class="p-3">23/04/18</td>
+                      <td class="p-3">
+                        <a
+                          href="#"
+                          class="font-sans antialiased text-sm text-current font-medium hover:text-primary"
+                          >Edit</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="border-b border-stone-200 last:border-0">
+                      <td class="p-3">Alexa Liras</td>
+                      <td class="p-3">Developer</td>
+                      <td class="p-3">23/04/18</td>
+                      <td class="p-3">
+                        <a
+                          href="#"
+                          class="font-sans antialiased text-sm text-current font-medium hover:text-primary"
+                          >Edit</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="border-b border-stone-200 last:border-0">
+                      <td class="p-3">Laurent Perrier</td>
+                      <td class="p-3">Executive</td>
+                      <td class="p-3">19/09/17</td>
+                      <td class="p-3">
+                        <a
+                          href="#"
+                          class="font-sans antialiased text-sm text-current font-medium hover:text-primary"
+                          >Edit</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="border-b border-stone-200 last:border-0">
+                      <td class="p-3">Michael Levi</td>
+                      <td class="p-3">Developer</td>
+                      <td class="p-3">24/12/08</td>
+                      <td class="p-3">
+                        <a
+                          href="#"
+                          class="font-sans antialiased text-sm text-current font-medium hover:text-primary"
+                          >Edit</a
+                        >
+                      </td>
+                    </tr>
+                    <tr class="border-b border-stone-200 last:border-0">
+                      <td class="p-3">Richard Gran</td>
+                      <td class="p-3">Manager</td>
+                      <td class="p-3">04/10/21</td>
+                      <td class="p-3">
+                        <a
+                          href="#"
+                          class="font-sans antialiased text-sm text-current font-medium hover:text-primary"
+                          >Edit</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;div class="flex flex-col items-center px-5"&gt;
+  &lt;div class="w-full overflow-hidden rounded-lg border border-stone-200"&gt;
+    &lt;table class="w-full"&gt;
+      &lt;thead class="border-b border-stone-200 bg-stone-100 text-sm font-medium text-stone-600"&gt;
+        &lt;tr&gt;
+          &lt;th class="px-2.5 py-2 text-start font-medium"&gt;Name&lt;/th&gt;
+          &lt;th class="px-2.5 py-2 text-start font-medium"&gt;Job&lt;/th&gt;
+          &lt;th class="px-2.5 py-2 text-start font-medium"&gt;Employed&lt;/th&gt;
+          &lt;th class="px-2.5 py-2 text-start font-medium"&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody class="group text-sm text-stone-800"&gt;
+        &lt;tr class="border-b border-stone-200 last:border-0"&gt;
+          &lt;td class="p-3"&gt;John Michael&lt;/td&gt;
+          &lt;td class="p-3"&gt;Manager&lt;/td&gt;
+          &lt;td class="p-3"&gt;23/04/18&lt;/td&gt;
+          &lt;td class="p-3"&gt;
+            &lt;a href="#" class="font-sans antialiased text-sm text-current font-medium hover:text-primary"&gt;Edit&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="border-b border-stone-200 last:border-0"&gt;
+          &lt;td class="p-3"&gt;Alexa Liras&lt;/td&gt;
+          &lt;td class="p-3"&gt;Developer&lt;/td&gt;
+          &lt;td class="p-3"&gt;23/04/18&lt;/td&gt;
+          &lt;td class="p-3"&gt;
+            &lt;a href="#" class="font-sans antialiased text-sm text-current font-medium hover:text-primary"&gt;Edit&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="border-b border-stone-200 last:border-0"&gt;
+          &lt;td class="p-3"&gt;Laurent Perrier&lt;/td&gt;
+          &lt;td class="p-3"&gt;Executive&lt;/td&gt;
+          &lt;td class="p-3"&gt;19/09/17&lt;/td&gt;
+          &lt;td class="p-3"&gt;
+            &lt;a href="#" class="font-sans antialiased text-sm text-current font-medium hover:text-primary"&gt;Edit&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="border-b border-stone-200 last:border-0"&gt;
+          &lt;td class="p-3"&gt;Michael Levi&lt;/td&gt;
+          &lt;td class="p-3"&gt;Developer&lt;/td&gt;
+          &lt;td class="p-3"&gt;24/12/08&lt;/td&gt;
+          &lt;td class="p-3"&gt;
+            &lt;a href="#" class="font-sans antialiased text-sm text-current font-medium hover:text-primary"&gt;Edit&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="border-b border-stone-200 last:border-0"&gt;
+          &lt;td class="p-3"&gt;Richard Gran&lt;/td&gt;
+          &lt;td class="p-3"&gt;Manager&lt;/td&gt;
+          &lt;td class="p-3"&gt;04/10/21&lt;/td&gt;
+          &lt;td class="p-3"&gt;
+            &lt;a href="#" class="font-sans antialiased text-sm text-current font-medium hover:text-primary"&gt;Edit&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-2 relative">
+          <h1 class="text-2xl font-bold">Table with Avatar</h1>
+          <div class="card-2 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <section class="container px-4 mx-auto">
+              <div class="flex items-center gap-x-3">
+                <h2 class="text-lg font-medium text-gray-800">Team members</h2>
+
+                <span
+                  class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full"
+                  >100 users</span
+                >
+              </div>
+
+              <div class="flex flex-col mt-6">
+                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div
+                    class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8"
+                  >
+                    <div
+                      class="overflow-hidden border border-gray-200 md:rounded-lg"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"
+                            >
+                              <div class="flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 border-gray-300 rounded"
+                                />
+                                <span>Name</span>
+                              </div>
+                            </th>
+
+                            <th
+                              scope="col"
+                              class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
+                            >
+                              <button class="flex items-center gap-x-2">
+                                <span>Status</span>
+
+                                <svg
+                                  class="h-3"
+                                  viewBox="0 0 10 11"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2.13347 0.0999756H2.98516L5.01902 4.79058H3.86226L3.45549 3.79907H1.63772L1.24366 4.79058H0.0996094L2.13347 0.0999756ZM2.54025 1.46012L1.96822 2.92196H3.11227L2.54025 1.46012Z"
+                                    fill="currentColor"
+                                    stroke="currentColor"
+                                    stroke-width="0.1"
+                                  />
+                                  <path
+                                    d="M0.722656 9.60832L3.09974 6.78633H0.811638V5.87109H4.35819V6.78633L2.01925 9.60832H4.43446V10.5617H0.722656V9.60832Z"
+                                    fill="currentColor"
+                                    stroke="currentColor"
+                                    stroke-width="0.1"
+                                  />
+                                  <path
+                                    d="M8.45558 7.25664V7.40664H8.60558H9.66065C9.72481 7.40664 9.74667 7.42274 9.75141 7.42691C9.75148 7.42808 9.75146 7.42993 9.75116 7.43262C9.75001 7.44265 9.74458 7.46304 9.72525 7.49314C9.72522 7.4932 9.72518 7.49326 9.72514 7.49332L7.86959 10.3529L7.86924 10.3534C7.83227 10.4109 7.79863 10.418 7.78568 10.418C7.77272 10.418 7.73908 10.4109 7.70211 10.3534L7.70177 10.3529L5.84621 7.49332C5.84617 7.49325 5.84612 7.49318 5.84608 7.49311C5.82677 7.46302 5.82135 7.44264 5.8202 7.43262C5.81989 7.42993 5.81987 7.42808 5.81994 7.42691C5.82469 7.42274 5.84655 7.40664 5.91071 7.40664H6.96578H7.11578V7.25664V0.633865C7.11578 0.42434 7.29014 0.249976 7.49967 0.249976H8.07169C8.28121 0.249976 8.45558 0.42434 8.45558 0.633865V7.25664Z"
+                                    fill="currentColor"
+                                    stroke="currentColor"
+                                    stroke-width="0.3"
+                                  />
+                                </svg>
+                              </button>
+                            </th>
+
+                            <th
+                              scope="col"
+                              class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
+                            >
+                              <button class="flex items-center gap-x-2">
+                                <span>Role</span>
+
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="2"
+                                  stroke="currentColor"
+                                  class="w-4 h-4"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                                  />
+                                </svg>
+                              </button>
+                            </th>
+
+                            <th
+                              scope="col"
+                              class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
+                            >
+                              Email address
+                            </th>
+
+                            <th
+                              scope="col"
+                              class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
+                            >
+                              Teams
+                            </th>
+
+                            <th scope="col" class="relative py-3.5 px-4">
+                              <span class="sr-only">Edit</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div class="inline-flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 rounded"
+                                />
+
+                                <div class="flex items-center gap-x-2">
+                                  <img
+                                    class="object-cover w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                    alt=""
+                                  />
+                                  <div>
+                                    <h2 class="font-medium text-gray-800">
+                                      Arthur Melo
+                                    </h2>
+                                    <p
+                                      class="text-sm font-normal text-gray-600"
+                                    >
+                                      @authurmelo
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div
+                                class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"
+                              >
+                                <span
+                                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                                ></span>
+
+                                <h2
+                                  class="text-sm font-normal text-emerald-500"
+                                >
+                                  Active
+                                </h2>
+                              </div>
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              Design Director
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              authurmelo@example.com
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-2">
+                                <p
+                                  class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"
+                                >
+                                  Design
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"
+                                >
+                                  Product
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"
+                                >
+                                  Marketing
+                                </p>
+                              </div>
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-6">
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                    />
+                                  </svg>
+                                </button>
+
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div class="inline-flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 border-gray-300 rounded"
+                                />
+
+                                <div class="flex items-center gap-x-2">
+                                  <img
+                                    class="object-cover w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                                    alt=""
+                                  />
+                                  <div>
+                                    <h2 class="font-medium text-gray-800">
+                                      Amelia. Anderson
+                                    </h2>
+                                    <p
+                                      class="text-sm font-normal text-gray-600"
+                                    >
+                                      @ameliaanderson
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div
+                                class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"
+                              >
+                                <span
+                                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                                ></span>
+
+                                <h2
+                                  class="text-sm font-normal text-emerald-500"
+                                >
+                                  Active
+                                </h2>
+                              </div>
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              Lead Developer
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              ameliaanderson@example.com
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-2">
+                                <p
+                                  class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"
+                                >
+                                  Design
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"
+                                >
+                                  Product
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"
+                                >
+                                  Marketing
+                                </p>
+                              </div>
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-6">
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                    />
+                                  </svg>
+                                </button>
+
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div class="inline-flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 border-gray-300 rounded"
+                                />
+
+                                <div class="flex items-center gap-x-2">
+                                  <img
+                                    class="object-cover w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1608174386344-80898cec6beb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                    alt=""
+                                  />
+                                  <div>
+                                    <h2 class="font-medium text-gray-800">
+                                      junior REIS
+                                    </h2>
+                                    <p
+                                      class="text-sm font-normal text-gray-600"
+                                    >
+                                      @junior
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div
+                                class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"
+                              >
+                                <span
+                                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                                ></span>
+
+                                <h2
+                                  class="text-sm font-normal text-emerald-500"
+                                >
+                                  Active
+                                </h2>
+                              </div>
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              Products Managers
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              junior@example.com
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-2">
+                                <p
+                                  class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"
+                                >
+                                  Design
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"
+                                >
+                                  Product
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"
+                                >
+                                  Marketing
+                                </p>
+                              </div>
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-6">
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                    />
+                                  </svg>
+                                </button>
+
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div class="inline-flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 border-gray-300 rounded"
+                                />
+
+                                <div class="flex items-center gap-x-2">
+                                  <img
+                                    class="object-cover w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt=""
+                                  />
+                                  <div>
+                                    <h2 class="font-medium text-gray-800">
+                                      Olivia Wathan
+                                    </h2>
+                                    <p
+                                      class="text-sm font-normal text-gray-600"
+                                    >
+                                      @oliviawathan
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div
+                                class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"
+                              >
+                                <span
+                                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                                ></span>
+
+                                <h2
+                                  class="text-sm font-normal text-emerald-500"
+                                >
+                                  Active
+                                </h2>
+                              </div>
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              Lead Designer
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              oliviawathan@example.com
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-2">
+                                <p
+                                  class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"
+                                >
+                                  Design
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"
+                                >
+                                  Product
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"
+                                >
+                                  Marketing
+                                </p>
+                              </div>
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-6">
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                    />
+                                  </svg>
+                                </button>
+
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div class="inline-flex items-center gap-x-3">
+                                <input
+                                  type="checkbox"
+                                  class="text-blue-500 border-gray-300 rounded"
+                                />
+
+                                <div class="flex items-center gap-x-2">
+                                  <img
+                                    class="object-cover w-10 h-10 rounded-full"
+                                    src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt=""
+                                  />
+                                  <div>
+                                    <h2 class="font-medium text-gray-800">
+                                      Mia
+                                    </h2>
+                                    <p
+                                      class="text-sm font-normal text-gray-600"
+                                    >
+                                      @mia
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"
+                            >
+                              <div
+                                class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"
+                              >
+                                <span
+                                  class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                                ></span>
+
+                                <h2
+                                  class="text-sm font-normal text-emerald-500"
+                                >
+                                  Active
+                                </h2>
+                              </div>
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              Graphic Designer
+                            </td>
+                            <td
+                              class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"
+                            >
+                              mia@example.com
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-2">
+                                <p
+                                  class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"
+                                >
+                                  Design
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"
+                                >
+                                  Product
+                                </p>
+                                <p
+                                  class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"
+                                >
+                                  Marketing
+                                </p>
+                              </div>
+                            </td>
+                            <td class="px-4 py-4 text-sm whitespace-nowrap">
+                              <div class="flex items-center gap-x-6">
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                    />
+                                  </svg>
+                                </button>
+
+                                <button
+                                  class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-5 h-5"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                                    />
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-6">
+                <a
+                  href="#"
+                  class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5 rtl:-scale-x-100"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                    />
+                  </svg>
+
+                  <span> previous </span>
+                </a>
+
+                <div class="items-center hidden lg:flex gap-x-3">
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-blue-500 rounded-md bg-blue-100/60"
+                    >1</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >2</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >3</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >...</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >12</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >13</a
+                  >
+                  <a
+                    href="#"
+                    class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"
+                    >14</a
+                  >
+                </div>
+
+                <a
+                  href="#"
+                  class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"
+                >
+                  <span> Next </span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5 rtl:-scale-x-100"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </section>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;section class="container px-4 mx-auto"&gt;
+  &lt;div class="flex items-center gap-x-3"&gt;
+    &lt;h2 class="text-lg font-medium text-gray-800"&gt;
+      Team members
+    &lt;/h2&gt;
+    &lt;span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full"&gt;
+      100 users
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex flex-col mt-6"&gt;
+    &lt;div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8"&gt;
+      &lt;div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8"&gt;
+        &lt;div class="overflow-hidden border border-gray-200 md:rounded-lg"&gt;
+          &lt;table class="min-w-full divide-y divide-gray-200"&gt;
+            &lt;thead class="bg-gray-50"&gt;
+              &lt;tr&gt;
+                &lt;th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"&gt;
+                  &lt;div class="flex items-center gap-x-3"&gt;
+                    &lt;input
+                      type="checkbox"
+                      class="text-blue-500 border-gray-300 rounded"
+                    /&gt;
+                    &lt;span&gt;Name&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/th&gt;
+                &lt;th
+  scope="col"
+  class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"&gt;
+  &lt;button class="flex items-center gap-x-2"&gt;
+    &lt;span&gt;Status&lt;/span&gt;
+    &lt;svg class="h-3" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;path d="M2.13347 0.0999756H2.98516L5.01902 4.79058H3.86226L3.45549 3.79907H1.63772L1.24366 4.79058H0.0996094L2.13347 0.0999756ZM2.54025 1.46012L1.96822 2.92196H3.11227L2.54025 1.46012Z"
+        fill="currentColor" stroke="currentColor" stroke-width="0.1"/&gt;
+      &lt;path d="M0.722656 9.60832L3.09974 6.78633H0.811638V5.87109H4.35819V6.78633L2.01925 9.60832H4.43446V10.5617H0.722656V9.60832Z"
+        fill="currentColor" stroke="currentColor" stroke-width="0.1"/&gt;
+      &lt;path d="M8.45558 7.25664V7.40664H8.60558H9.66065C9.72481 7.40664 9.74667 7.42274 9.75141 7.42691C9.75148 7.42808 9.75146 7.42993 9.75116 7.43262C9.75001 7.44265 9.74458 7.46304 9.72525 7.49314L7.86959 10.3529C7.83227 10.4109 7.79863 10.418 7.78568 10.418C7.77272 10.418 7.73908 10.4109 7.70211 10.3534L5.84621 7.49332C5.82677 7.46302 5.82135 7.44264 5.8202 7.43262C5.81989 7.42993 5.81987 7.42808 5.81994 7.42691C5.82469 7.42274 5.84655 7.40664 5.91071 7.40664H6.96578H7.11578V7.25664V0.633865C7.11578 0.42434 7.29014 0.249976 7.49967 0.249976H8.07169C8.28121 0.249976 8.45558 0.42434 8.45558 0.633865V7.25664Z"
+        fill="currentColor" stroke="currentColor" stroke-width="0.3"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/th&gt;
+
+&lt;th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"&gt;
+  &lt;button class="flex items-center gap-x-2"&gt;
+    &lt;span&gt;Role&lt;/span&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="2" stroke="currentColor" class="w-4 h-4"&gt;
+      &lt;path stroke-linecap="round" stroke-linejoin="round"
+        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/th&gt;
+
+&lt;th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"&gt;
+  Email address
+&lt;/th&gt;
+
+&lt;th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"&gt;
+  Teams
+&lt;/th&gt;
+
+&lt;th scope="col" class="relative py-3.5 px-4"&gt;
+  &lt;span class="sr-only"&gt;Edit&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody class="bg-white divide-y divide-gray-200"&gt;
+  &lt;tr&gt;
+    &lt;td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+      &lt;div class="inline-flex items-center gap-x-3"&gt;
+        &lt;input type="checkbox" class="text-blue-500 rounded" /&gt;
+        &lt;div class="flex items-center gap-x-2"&gt;
+          &lt;img class="object-cover w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=880&amp;q=80" alt="" /&gt;
+          &lt;div&gt;
+            &lt;h2 class="font-medium text-gray-800"&gt;Arthur Melo&lt;/h2&gt;
+            &lt;p class="text-sm font-normal text-gray-600"&gt;@authurmelo&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+      &lt;div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"&gt;
+        &lt;span class="h-1.5 w-1.5 rounded-full bg-emerald-500"&gt;&lt;/span&gt;
+        &lt;h2 class="text-sm font-normal text-emerald-500"&gt;Active&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+      Design Director
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+      authurmelo@example.com
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+      &lt;div class="flex items-center gap-x-2"&gt;
+        &lt;p class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"&gt;Design&lt;/p&gt;
+        &lt;p class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"&gt;Product&lt;/p&gt;
+        &lt;p class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"&gt;Marketing&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+      &lt;div class="flex items-center gap-x-6"&gt;
+        &lt;button class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"&gt;
+          &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;button class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"&gt;
+          &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+      &lt;div class="inline-flex items-center gap-x-3"&gt;
+        &lt;input type="checkbox" class="text-blue-500 border-gray-300 rounded" /&gt;
+        &lt;div class="flex items-center gap-x-2"&gt;
+          &lt;img class="object-cover w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80" alt="" /&gt;
+          &lt;div&gt;
+            &lt;h2 class="font-medium text-gray-800"&gt;Amelia. Anderson&lt;/h2&gt;
+            &lt;p class="text-sm font-normal text-gray-600"&gt;@ameliaanderson&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+      &lt;div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"&gt;
+        &lt;span class="h-1.5 w-1.5 rounded-full bg-emerald-500"&gt;&lt;/span&gt;
+        &lt;h2 class="text-sm font-normal text-emerald-500"&gt;Active&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+      Lead Developer
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+      ameliaanderson@example.com
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+      &lt;div class="flex items-center gap-x-2"&gt;
+        &lt;p class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"&gt;Design&lt;/p&gt;
+        &lt;p class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"&gt;Product&lt;/p&gt;
+        &lt;p class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"&gt;Marketing&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+      &lt;div class="flex items-center gap-x-6"&gt;
+        &lt;button class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"&gt;
+          &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;button class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"&gt;
+          &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+    &lt;div class="inline-flex items-center gap-x-3"&gt;
+      &lt;input type="checkbox" class="text-blue-500 border-gray-300 rounded" /&gt;
+
+      &lt;div class="flex items-center gap-x-2"&gt;
+        &lt;img
+          class="object-cover w-10 h-10 rounded-full"
+          src="https://images.unsplash.com/photo-1608174386344-80898cec6beb?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"
+          alt=""
+        /&gt;
+        &lt;div&gt;
+          &lt;h2 class="font-medium text-gray-800"&gt;
+            junior REIS
+          &lt;/h2&gt;
+          &lt;p class="text-sm font-normal text-gray-600"&gt;
+            @junior
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/td&gt>
+  &lt;td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+    &lt;div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"&gt;
+      &lt;span class="h-1.5 w-1.5 rounded-full bg-emerald-500"&gt;&lt;/span&gt;
+      &lt;h2 class="text-sm font-normal text-emerald-500"&gt;
+        Active
+      &lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+    Products Managers
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+    junior@example.com
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+    &lt;div class="flex items-center gap-x-2"&gt;
+      &lt;p class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"&gt;
+        Design
+      &lt;/p&gt;
+      &lt;p class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"&gt;
+        Product
+      &lt;/p&gt;
+      &lt;p class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"&gt;
+        Marketing
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+    &lt;div class="flex items-center gap-x-6"&gt;
+      &lt;button class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+          &lt;path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+
+      &lt;button class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+          &lt;path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+    &lt;div class="inline-flex items-center gap-x-3"&gt;
+      &lt;input type="checkbox" class="text-blue-500 border-gray-300 rounded" /&gt;
+      &lt;div class="flex items-center gap-x-2"&gt;
+        &lt;img
+          class="object-cover w-10 h-10 rounded-full"
+          src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+          alt=""
+        /&gt;
+        &lt;div&gt;
+          &lt;h2 class="font-medium text-gray-800"&gt;Mia&lt;/h2&gt;
+          &lt;p class="text-sm font-normal text-gray-600"&gt;@mia&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap"&gt;
+    &lt;div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60"&gt;
+      &lt;span class="h-1.5 w-1.5 rounded-full bg-emerald-500"&gt;&lt;/span&gt;
+      &lt;h2 class="text-sm font-normal text-emerald-500"&gt;Active&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+    Graphic Designer
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap"&gt;
+    mia@example.com
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+    &lt;div class="flex items-center gap-x-2"&gt;
+      &lt;p class="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60"&gt;Design&lt;/p&gt;
+      &lt;p class="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60"&gt;Product&lt;/p&gt;
+      &lt;p class="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60"&gt;Marketing&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+  &lt;td class="px-4 py-4 text-sm whitespace-nowrap"&gt;
+    &lt;div class="flex items-center gap-x-6"&gt;
+      &lt;button class="text-gray-500 transition-colors duration-200 hover:text-red-500 focus:outline-none"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+          &lt;path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+
+      &lt;button class="text-gray-500 transition-colors duration-200 hover:text-yellow-500 focus:outline-none"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"&gt;
+          &lt;path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/&gt;
+        &lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flex items-center justify-between mt-6"&gt;
+  &lt;a href="#" class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100"&gt;
+      &lt;path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"/&gt;
+    &lt;/svg&gt;
+    &lt;span&gt; previous &lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;div class="items-center hidden lg:flex gap-x-3"&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-blue-500 rounded-md bg-blue-100/60"&gt;1&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;2&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;3&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;...&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;12&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;13&lt;/a&gt;
+    &lt;a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md hover:bg-gray-100"&gt;14&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;a href="#" class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100"&gt;
+    &lt;span&gt; Next &lt;/span&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100"&gt;
+      &lt;path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+
+</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-3 relative">
+          <h1 class="text-2xl font-bold">Table with shadow</h1>
+          <div class="card-3 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-5">
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500"
+              >
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <tr>
+                    <th scope="col" class="px-6 py-3">Product name</th>
+                    <th scope="col" class="px-6 py-3">Color</th>
+                    <th scope="col" class="px-6 py-3">Category</th>
+                    <th scope="col" class="px-6 py-3">Price</th>
+                    <th scope="col" class="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Apple MacBook Pro 17"
+                    </th>
+                    <td class="px-6 py-4">Silver</td>
+                    <td class="px-6 py-4">Laptop</td>
+                    <td class="px-6 py-4">$2999</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b border-gray-200">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Microsoft Surface Pro
+                    </th>
+                    <td class="px-6 py-4">White</td>
+                    <td class="px-6 py-4">Laptop PC</td>
+                    <td class="px-6 py-4">$1999</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="bg-white">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Magic Mouse 2
+                    </th>
+                    <td class="px-6 py-4">Black</td>
+                    <td class="px-6 py-4">Accessories</td>
+                    <td class="px-6 py-4">$99</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-5"&gt;
+  &lt;table class="w-full text-sm text-left rtl:text-right text-gray-500"&gt;
+    &lt;thead class="text-xs text-gray-700 uppercase bg-gray-50"&gt;
+      &lt;tr&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Product name&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Color&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Category&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Price&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Action&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr class="bg-white border-b border-gray-200"&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"&gt;
+          Apple MacBook Pro 17&quot;
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;Silver&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Laptop&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$2999&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-blue-600 hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white border-b border-gray-200"&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"&gt;
+          Microsoft Surface Pro
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;White&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Laptop PC&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$1999&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-blue-600 hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white"&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"&gt;
+          Magic Mouse 2
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;Black&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Accessories&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$99&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-blue-600 hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-4 relative">
+          <h1 class="text-2xl font-bold">Table with Products</h1>
+          <div class="card-4 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500"
+              >
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <tr>
+                    <th scope="col" class="px-16 py-3">
+                      <span class="sr-only">Image</span>
+                    </th>
+                    <th scope="col" class="px-6 py-3">Product</th>
+                    <th scope="col" class="px-6 py-3">Qty</th>
+                    <th scope="col" class="px-6 py-3">Price</th>
+                    <th scope="col" class="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b border-gray-200 hover:bg-gray-50"
+                  >
+                    <td class="p-4">
+                      <img
+                        src="/assets/images/card-3.png"
+                        class="w-16 md:w-32 max-w-full max-h-full"
+                        alt="Apple Watch"
+                      />
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Apple Watch
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <button
+                          class="inline-flex items-center justify-center p-1 me-3 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <div>
+                          <input
+                            type="number"
+                            id="first_product"
+                            class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1"
+                            placeholder="1"
+                            required
+                          />
+                        </div>
+                        <button
+                          class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$599</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-red-600 hover:underline"
+                        >Remove</a
+                      >
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b border-gray-200 hover:bg-gray-50"
+                  >
+                    <td class="p-4">
+                      <img
+                        src="/assets/images/table-1.png"
+                        class="w-16 md:w-32 max-w-full max-h-full"
+                        alt="Apple iMac"
+                      />
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      iMac 27"
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <button
+                          class="inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <div class="ms-3">
+                          <input
+                            type="number"
+                            id="first_product"
+                            class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1"
+                            placeholder="1"
+                            required
+                          />
+                        </div>
+                        <button
+                          class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$2499</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-red-600 hover:underline"
+                        >Remove</a
+                      >
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b border-gray-200 hover:bg-gray-50"
+                  >
+                    <td class="p-4">
+                      <img
+                        src="/assets/images/table-2.png"
+                        class="w-16 md:w-32 max-w-full max-h-full"
+                        alt="iPhone 12"
+                      />
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      IPhone 12
+                    </td>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <button
+                          class="inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 2"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M1 1h16"
+                            />
+                          </svg>
+                        </button>
+                        <div class="ms-3">
+                          <input
+                            type="number"
+                            id="first_product"
+                            class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1"
+                            placeholder="1"
+                            required
+                          />
+                        </div>
+                        <button
+                          class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200"
+                          type="button"
+                        >
+                          <span class="sr-only">Quantity button</span>
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 1v16M1 9h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$999</td>
+                    <td class="px-6 py-4">
+                      <a
+                        href="#"
+                        class="font-medium text-red-600 hover:underline"
+                        >Remove</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+
+
+
+              <code>&lt;div class="relative overflow-x-auto shadow-md sm:rounded-lg"&gt;
+  &lt;table class="w-full text-sm text-left rtl:text-right text-gray-500"&gt;
+    &lt;thead class="text-xs text-gray-700 uppercase bg-gray-50"&gt;
+      &lt;tr&gt;
+        &lt;th scope="col" class="px-16 py-3"&gt;
+          &lt;span class="sr-only"&gt;Image&lt;/span&gt;
+        &lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Product&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Qty&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Price&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Action&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr class="bg-white border-b border-gray-200 hover:bg-gray-50"&gt;
+        &lt;td class="p-4"&gt;
+          &lt;img src="/assets/images/card-3.png" class="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch" /&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;Apple Watch&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;div class="flex items-center"&gt;
+            &lt;button class="inline-flex items-center justify-center p-1 me-3 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+            &lt;div&gt;
+              &lt;input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1" placeholder="1" required /&gt;
+            &lt;/div&gt;
+            &lt;button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;$599&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-red-600 hover:underline"&gt;Remove&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white border-b border-gray-200 hover:bg-gray-50"&gt;
+        &lt;td class="p-4"&gt;
+          &lt;img src="/assets/images/table-1.png" class="w-16 md:w-32 max-w-full max-h-full" alt="Apple iMac" /&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;iMac 27"&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;div class="flex items-center"&gt;
+            &lt;button class="inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+            &lt;div class="ms-3"&gt;
+              &lt;input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1" placeholder="1" required /&gt;
+            &lt;/div&gt;
+            &lt;button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;$2499&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-red-600 hover:underline"&gt;Remove&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white border-b border-gray-200 hover:bg-gray-50"&gt;
+        &lt;td class="p-4"&gt;
+          &lt;img src="/assets/images/table-2.png" class="w-16 md:w-32 max-w-full max-h-full" alt="iPhone 12" /&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;iPhone 12&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;div class="flex items-center"&gt;
+            &lt;button class="inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+            &lt;div class="ms-3"&gt;
+              &lt;input type="number" id="first_product" class="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1" placeholder="1" required /&gt;
+            &lt;/div&gt;
+            &lt;button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" type="button"&gt;
+              &lt;span class="sr-only"&gt;Quantity button&lt;/span&gt;
+              &lt;svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18"&gt;
+                &lt;path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" /&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="px-6 py-4 font-semibold text-gray-900"&gt;$999&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;
+          &lt;a href="#" class="font-medium text-red-600 hover:underline"&gt;Remove&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+
+
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-5 relative">
+          <h1 class="text-2xl font-bold">Table with Hover Effect</h1>
+          <div class="card-5 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-5">
+              <table
+                class="w-full text-sm text-left rtl:text-right text-gray-500"
+              >
+                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                  <tr>
+                    <th scope="col" class="px-6 py-3">Product name</th>
+                    <th scope="col" class="px-6 py-3">Color</th>
+                    <th scope="col" class="px-6 py-3">Category</th>
+                    <th scope="col" class="px-6 py-3">Price</th>
+                    <th scope="col" class="px-6 py-3">
+                      <span class="sr-only">Edit</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b border-gray-200 hover:bg-gray-100"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Apple MacBook Pro 17"
+                    </th>
+                    <td class="px-6 py-4">Silver</td>
+                    <td class="px-6 py-4">Laptop</td>
+                    <td class="px-6 py-4">$2999</td>
+                    <td class="px-6 py-4 text-right">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b border-gray-200 hover:bg-gray-100"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Microsoft Surface Pro
+                    </th>
+                    <td class="px-6 py-4">White</td>
+                    <td class="px-6 py-4">Laptop PC</td>
+                    <td class="px-6 py-4">$1999</td>
+                    <td class="px-6 py-4 text-right">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-100">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      Magic Mouse 2
+                    </th>
+                    <td class="px-6 py-4">Black</td>
+                    <td class="px-6 py-4">Accessories</td>
+                    <td class="px-6 py-4">$99</td>
+                    <td class="px-6 py-4 text-right">
+                      <a
+                        href="#"
+                        class="font-medium text-blue-600 hover:underline"
+                        >Edit</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+
+<code>&lt;div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-5"&gt;
+  &lt;table class="w-full text-sm text-left rtl:text-right text-gray-500 "&gt;
+    &lt;thead class="text-xs text-gray-700 uppercase bg-gray-100 "&gt;
+      &lt;tr&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Product name&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Color&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Category&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;Price&lt;/th&gt;
+        &lt;th scope="col" class="px-6 py-3"&gt;
+          &lt;span class="sr-only"&gt;Edit&lt;/span&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr class="bg-white border-b border-gray-200 hover:bg-gray-100 "&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "&gt;
+          Apple MacBook Pro 17"
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;Silver&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Laptop&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$2999&lt;/td&gt;
+        &lt;td class="px-6 py-4 text-right"&gt;
+          &lt;a href="#" class="font-medium text-blue-600  hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white border-b border-gray-200 hover:bg-gray-100 "&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "&gt;
+          Microsoft Surface Pro
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;White&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Laptop PC&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$1999&lt;/td&gt;
+        &lt;td class="px-6 py-4 text-right"&gt;
+          &lt;a href="#" class="font-medium text-blue-600 hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="bg-white hover:bg-gray-100 "&gt;
+        &lt;th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "&gt;
+          Magic Mouse 2
+        &lt;/th&gt;
+        &lt;td class="px-6 py-4"&gt;Black&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;Accessories&lt;/td&gt;
+        &lt;td class="px-6 py-4"&gt;$99&lt;/td&gt;
+        &lt;td class="px-6 py-4 text-right"&gt;
+          &lt;a href="#" class="font-medium text-blue-600  hover:underline"&gt;Edit&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+
+
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer class="footer px-36 mt-8 mb-8">
+      <div class="flex items-center gap-4 text-[#111418]">
+        <div class="size-4">
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <h2
+          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+        >
+          Component Library
+        </h2>
+      </div>
+      <div class="desc">
+        <p class="mt-6 text-slate-600">
+          Free open source Tailwind CSS components <br />for application
+          interfaces.
+        </p>
+      </div>
+      <div class="links flex gap-3 mt-6">
+        <a href="#">FAQs</a>
+        <a href="#">Acknowledgement</a>
+      </div>
+      <p class="text-slate-600 mt-5 text-end">
+        Made by Jhanvi Somani &copy; All rights Reserved
+      </p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

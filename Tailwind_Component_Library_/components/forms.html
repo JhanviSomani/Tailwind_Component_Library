@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms_page</title>
+    <!-- css-file -->
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="flex items-center justify-between px-12 h-16 lg:gap-8">
+        <a
+          class="flex items-center gap-4 text-[#111418] whitespace-nowrap"
+          href="/index.html"
+        >
+          <div class="size-4">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+          >
+            Component Library
+          </h2>
+        </a>
+        <div
+          class="dropdown-menu absolute -top-full left-0 w-full flex flex-col gap-6 items-center py-2 text-lg max-lg:bg-white lg:static lg:flex-row lg:justify-between"
+        >
+          <ul class="flex flex-col items-center gap-4 lg:flex-row lg:gap-8">
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/cards.html"
+                >Cards</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Buttons.html"
+                >Buttons</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Breadcrumb.html"
+                >Breadcrumbs</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/forms.html"
+                >Forms</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="/components/Tables.html"
+                >Tables</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex flex-col items-center gap-4 lg:flex-row lg:gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#60758a] flex border-none bg-[#f0f2f5] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-full placeholder:text-[#60758a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Sign In</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="menu-toggle" class="text-[#111418] toggle-button lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            class="w-6 h-6"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main overflow-x-hidden mb-10">
+      <section class="heading px-36 py-8">
+        <h1 class="text-4xl font-bold">Forms Components</h1>
+        <p class="text-lg max-w-[500px] mt-4">
+          Explore a variety of Forms components designed with Tailwind CSS and
+          start using it for your web design.
+        </p>
+      </section>
+      <hr />
+      <section class="cards-variety-section mt-12 px-36 flex flex-col gap-8">
+        <div class="preview-1 relative">
+          <h1 class="text-2xl font-bold">Default Form</h1>
+          <div class="card-1 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <form class="max-w-sm mx-auto">
+              <div class="mb-5">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                  >Your email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              </div>
+              <div class="mb-5">
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                  >Your password</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  required
+                />
+              </div>
+              <div class="flex items-start mb-5">
+                <div class="flex items-center h-5">
+                  <input
+                    id="remember"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300"
+                    required
+                  />
+                </div>
+                <label
+                  for="remember"
+                  class="ms-2 text-sm font-medium text-gray-900"
+                  >Remember me</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              >
+                Submit
+              </button>
+            </form>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;form class="max-w-sm mx-auto"&gt;
+  &lt;div class="mb-5"&gt;
+    &lt;label
+      for="email"
+      class="block mb-2 text-sm font-medium text-gray-900"
+    &gt;Your email&lt;/label&gt;
+    &lt;input
+      type="email"
+      id="email"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="name@flowbite.com"
+      required
+    /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mb-5"&gt;
+    &lt;label
+      for="password"
+      class="block mb-2 text-sm font-medium text-gray-900"
+    &gt;Your password&lt;/label&gt;
+    &lt;input
+      type="password"
+      id="password"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      required
+    /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex items-start mb-5"&gt;
+    &lt;div class="flex items-center h-5"&gt;
+      &lt;input
+        id="remember"
+        type="checkbox"
+        value=""
+        class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300"
+        required
+      /&gt;
+    &lt;/div&gt;
+    &lt;label
+      for="remember"
+      class="ms-2 text-sm font-medium text-gray-900"
+    &gt;Remember me&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;button
+    type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+  &gt;
+    Submit
+  &lt;/button&gt;
+&lt;/form&gt;
+</code>
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-2 relative">
+          <h1 class="text-2xl font-bold">Form Validation</h1>
+          <div class="card-2 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <form class="max-w-sm mx-auto">
+              <div class="mb-5">
+                <label
+                  for="username-success"
+                  class="block mb-2 text-sm font-medium text-green-700"
+                  >Your name</label
+                >
+                <input
+                  type="text"
+                  id="username-success"
+                  class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5"
+                  placeholder="Bonnie Green"
+                />
+                <p class="mt-2 text-sm text-green-600">
+                  <span class="font-medium">Alright!</span> Username available!
+                </p>
+              </div>
+              <div>
+                <label
+                  for="username-error"
+                  class="block mb-2 text-sm font-medium text-red-700"
+                  >Your name</label
+                >
+                <input
+                  type="text"
+                  id="username-error"
+                  class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+                  placeholder="Bonnie Green"
+                />
+                <p class="mt-2 text-sm text-red-600">
+                  <span class="font-medium">Oops!</span> Username already taken!
+                </p>
+              </div>
+            </form>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;form class="max-w-sm mx-auto"&gt;
+  &lt;div class="mb-5"&gt;
+    &lt;label
+      for="username-success"
+      class="block mb-2 text-sm font-medium text-green-700"
+    &gt;Your name&lt;/label&gt;
+    &lt;input
+      type="text"
+      id="username-success"
+      class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5"
+      placeholder="Bonnie Green"
+    /&gt;
+    &lt;p class="mt-2 text-sm text-green-600"&gt;
+      &lt;span class="font-medium"&gt;Alright!&lt;/span&gt; Username available!
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label
+      for="username-error"
+      class="block mb-2 text-sm font-medium text-red-700"
+    &gt;Your name&lt;/label&gt;
+    &lt;input
+      type="text"
+      id="username-error"
+      class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+      placeholder="Bonnie Green"
+    /&gt;
+    &lt;p class="mt-2 text-sm text-red-600"&gt;
+      &lt;span class="font-medium"&gt;Oops!&lt;/span&gt; Username already taken!
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code>
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-3 relative">
+          <h1 class="text-2xl font-bold">Checkbox</h1>
+          <div class="card-3 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <div class="flex justify-center px-4 pt-4">
+              <fieldset>
+                <legend class="sr-only">Checkbox variants</legend>
+
+                <div class="flex items-center mb-4">
+                  <input
+                    checked
+                    id="checkbox-1"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+                  />
+                  <label
+                    for="checkbox-1"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >I agree to the
+                    <a href="#" class="text-blue-600 hover:underline"
+                      >terms and conditions</a
+                    >.</label
+                  >
+                </div>
+
+                <div class="flex items-center mb-4">
+                  <input
+                    id="checkbox-2"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+                  />
+                  <label
+                    for="checkbox-2"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >I want to get promotional offers</label
+                  >
+                </div>
+
+                <div class="flex items-center mb-4">
+                  <input
+                    id="checkbox-3"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    for="checkbox-3"
+                    class="ms-2 text-sm font-medium text-gray-900"
+                    >I am 18 years or older</label
+                  >
+                </div>
+
+                <div class="flex mb-4">
+                  <div class="flex items-center h-5">
+                    <input
+                      id="helper-checkbox"
+                      aria-describedby="helper-checkbox-text"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+                    />
+                  </div>
+                  <div class="ms-2 text-sm">
+                    <label
+                      for="helper-checkbox"
+                      class="font-medium text-gray-900"
+                      >Free shipping via Flowbite</label
+                    >
+                    <p
+                      id="helper-checkbox-text"
+                      class="text-xs font-normal text-gray-500"
+                    >
+                      For orders shipped from $25 in books or $29 in other
+                      categories
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <input
+                    id="international-shipping-disabled"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                    disabled
+                  />
+                  <label
+                    for="international-shipping-disabled"
+                    class="ms-2 text-sm font-medium text-gray-400 dark:text-gray-500"
+                    >Eligible for international shipping (disabled)</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+<code>&lt;fieldset&gt;
+  &lt;legend class="sr-only"&gt;Checkbox variants&lt;/legend&gt;
+
+  &lt;div class="flex items-center mb-4"&gt;
+    &lt;input
+      checked
+      id="checkbox-1"
+      type="checkbox"
+      value=""
+      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+/&gt;
+    &lt;label
+      for="checkbox-1"
+      class="ms-2 text-sm font-medium text-gray-900"
+    &gt;I agree to the
+      &lt;a href="#" class="text-blue-600 hover:underline"&gt;terms and conditions&lt;/a&gt;.
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex items-center mb-4"&gt;
+    &lt;input
+      id="checkbox-2"
+      type="checkbox"
+      value=""
+      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+/&gt;
+    &lt;label for="checkbox-2" class="ms-2 text-sm font-medium text-gray-900"&gt;
+      I want to get promotional offers
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex items-center mb-4"&gt;
+    &lt;input
+      id="checkbox-3"
+      type="checkbox"
+      value=""
+      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2"
+/&gt;
+    &lt;label for="checkbox-3" class="ms-2 text-sm font-medium text-gray-900"&gt;
+      I am 18 years or older
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex mb-4"&gt;
+    &lt;div class="flex items-center h-5"&gt;
+      &lt;input
+        id="helper-checkbox"
+        aria-describedby="helper-checkbox-text"
+        type="checkbox"
+        value=""
+        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 focus:ring-2"
+/&gt;
+    &lt;/div&gt;
+    &lt;div class="ms-2 text-sm"&gt;
+      &lt;label for="helper-checkbox" class="font-medium text-gray-900"&gt;
+        Free shipping via Flowbite
+      &lt;/label&gt;
+      &lt;p id="helper-checkbox-text" class="text-xs font-normal text-gray-500"&gt;
+        For orders shipped from $25 in books or $29 in other categories
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex items-center"&gt;
+    &lt;input
+      id="international-shipping-disabled"
+      type="checkbox"
+      value=""
+      class="w-4 h-4 border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+      disabled
+    /&gt;
+    &lt;label
+      for="international-shipping-disabled"
+      class="ms-2 text-sm font-medium text-gray-400 dark:text-gray-500"
+    &gt;
+      Eligible for international shipping (disabled)
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code>
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-4 relative">
+          <h1 class="text-2xl font-bold">Floating Labels</h1>
+          <div class="card-4 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <form class="max-w-md mx-auto">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Email address</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="password"
+                  name="floating_password"
+                  id="floating_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Password</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="password"
+                  name="repeat_password"
+                  id="floating_repeat_password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_repeat_password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Confirm password</label
+                >
+              </div>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-5 group">
+                  <input
+                    type="text"
+                    name="floating_first_name"
+                    id="floating_first_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_first_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >First name</label
+                  >
+                </div>
+                <div class="relative z-0 w-full mb-5 group">
+                  <input
+                    type="text"
+                    name="floating_last_name"
+                    id="floating_last_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_last_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >Last name</label
+                  >
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-5 group">
+                  <input
+                    type="tel"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    name="floating_phone"
+                    id="floating_phone"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_phone"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >Phone number (123-456-7890)</label
+                  >
+                </div>
+                <div class="relative z-0 w-full mb-5 group">
+                  <input
+                    type="text"
+                    name="floating_company"
+                    id="floating_company"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                  />
+                  <label
+                    for="floating_company"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >Company (Ex. Google)</label
+                  >
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              >
+                Submit
+              </button>
+            </form>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+
+<code>&lt;form class="max-w-md mx-auto"&gt;
+  &lt;div class="relative z-0 w-full mb-5 group"&gt;
+    &lt;input
+      type="email"
+      name="floating_email"
+      id="floating_email"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    /&gt;
+    &lt;label
+      for="floating_email"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+    &gt;Email address&lt;/label&gt;
+  &lt;/div&gt>
+
+  &lt;div class="relative z-0 w-full mb-5 group"&gt;
+    &lt;input
+      type="password"
+      name="floating_password"
+      id="floating_password"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    /&gt;
+    &lt;label
+      for="floating_password"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+    &gt;Password&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="relative z-0 w-full mb-5 group"&gt;
+    &lt;input
+      type="password"
+      name="repeat_password"
+      id="floating_repeat_password"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    /&gt;
+    &lt;label
+      for="floating_repeat_password"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+    &gt;Confirm password&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="grid md:grid-cols-2 md:gap-6"&gt;
+    &lt;div class="relative z-0 w-full mb-5 group"&gt;
+      &lt;input
+        type="text"
+        name="floating_first_name"
+        id="floating_first_name"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+      /&gt;
+      &lt;label
+        for="floating_first_name"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      &gt;First name&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="relative z-0 w-full mb-5 group"&gt;
+      &lt;input
+        type="text"
+        name="floating_last_name"
+        id="floating_last_name"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+      /&gt;
+      &lt;label
+        for="floating_last_name"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      &gt;Last name&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="grid md:grid-cols-2 md:gap-6"&gt;
+    &lt;div class="relative z-0 w-full mb-5 group"&gt;
+      &lt;input
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        name="floating_phone"
+        id="floating_phone"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+      /&gt;
+      &lt;label
+        for="floating_phone"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      &gt;Phone number (123-456-7890)&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="relative z-0 w-full mb-5 group"&gt;
+      &lt;input
+        type="text"
+        name="floating_company"
+        id="floating_company"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+      /&gt;
+      &lt;label
+        for="floating_company"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      &gt;Company (Ex. Google)&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button
+    type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+  &gt;
+    Submit
+  &lt;/button&gt;
+&lt;/form&gt;
+</code>
+
+
+
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-5 relative">
+          <h1 class="text-2xl font-bold">Select Input</h1>
+          <div class="card-5 border-2 rounded-xl py-5 mt-8 shadow-lg">
+            <form class="max-w-sm mx-auto">
+              <label
+                for="countries"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Select your country</label
+              >
+              <select
+                id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option>United States</option>
+                <option>Canada</option>
+                <option>France</option>
+                <option>Germany</option>
+              </select>
+            </form>
+
+            <div class="relative mt-5 rounded-2xl px-2">
+              <button
+                onclick="copyToClipboard(this)"
+                class="absolute top-2 right-7 px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded z-10"
+              >
+                Copy
+              </button>
+
+              <pre
+                class="bg-gray-900 text-white text-sm p-6 rounded overflow-x-auto overflow-y-auto max-h-96"
+              >
+
+<code>&lt;form class="max-w-sm mx-auto"&gt;
+  &lt;label
+    for="countries"
+    class="block mb-2 text-sm font-medium text-gray-900"
+  &gt;Select your country&lt;/label&gt;
+  &lt;select
+    id="countries"
+    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+  &gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;France&lt;/option&gt;
+    &lt;option&gt;Germany&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;
+</code>
+
+
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer class="footer px-36 mt-8 mb-8">
+      <div class="flex items-center gap-4 text-[#111418]">
+        <div class="size-4">
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <h2
+          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+        >
+          Component Library
+        </h2>
+      </div>
+      <div class="desc">
+        <p class="mt-6 text-slate-600">
+          Free open source Tailwind CSS components <br />for application
+          interfaces.
+        </p>
+      </div>
+      <div class="links flex gap-3 mt-6">
+        <a href="#">FAQs</a>
+        <a href="#">Acknowledgement</a>
+      </div>
+      <p class="text-slate-600 mt-5 text-end">
+        Made by Jhanvi Somani &copy; All rights Reserved
+      </p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
